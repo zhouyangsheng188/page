@@ -1,5 +1,7 @@
 # page
 
+#下载  composer require zhouys/page
+
 #请在html页面中引入bootstrap，否则样式很丑
 
 use zhouys\Pagelist;
