@@ -1,0 +1,19 @@
+{
+    "name": "zhouys/page",
+    "description": "a php page class",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "周阳生",
+            "email": "zhouyangsheng@hfjy.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+	"autoload": {
+        "psr-4": {
+            "zhouys\\": "src/"
+        }
+    }
+}
