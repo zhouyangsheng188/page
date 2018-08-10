@@ -2,7 +2,7 @@
 
 namespace zhouys;
 
-class Page
+class Pagelist
 {
 	private $listSize = 5;//页码条中显示的页码数
 	private $params;//地址栏中携带其他的参数
