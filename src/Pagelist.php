@@ -2,15 +2,21 @@
 
 namespace zhouys;
 
-class Pagelist
+class Page
 {
 	private $listSize = 5;//页码条中显示的页码数
 	private $params;//地址栏中携带其他的参数
 
 	public function __construct(array $data)
 	{
-		$this->params = isset($data['params']) ? $data['params'] : '';
-		$this->listSize = isset($data['listSize']) ? $data['listSize'] : $this->listSize;
+	    $this->params = isset($data['params']) ? $data['params'] : '';
+	    if(isset($data['listSize'])){
+                if($data['listSize']%2==0){
+                    $this->listSize = $data['listSize'] +1;
+                }else{
+                    $this->listSize = $data['listSize'];
+                }
+            }
 	}
 
 	public function getParams($params)
@@ -82,7 +88,6 @@ class Pagelist
 		}
 
 		$page_banner.=" 共".$sumPage."页".$total."条数据";
-
 		return $page_banner;
 	}
 }
