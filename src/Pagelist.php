@@ -10,13 +10,13 @@ class Pagelist
 	public function __construct(array $data)
 	{
 	    $this->params = isset($data['params']) ? $data['params'] : '';
-	    if(isset($data['listSize'])){
-                if($data['listSize']%2==0){
-                    $this->listSize = $data['listSize'] +1;
-                }else{
-                    $this->listSize = $data['listSize'];
-                }
+        if(isset($data['listSize'])){
+            if($data['listSize']%2==0){
+                $this->listSize = abs($data['listSize']) + 1;
+            }else{
+                $this->listSize = abs($data['listSize']);
             }
+        }
 	}
 
 	public function getParams($params)
